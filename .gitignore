@@ -11,10 +11,10 @@
 .mtj.tmp/
 
 # Ignore Maven directory
-.mvn/
+.mvn
 
 # Ignore IntelliJ IDEA directory
-.idea/
+.idea
 
 # Package Files #
 *.jar
