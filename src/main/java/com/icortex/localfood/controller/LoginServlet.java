@@ -2,6 +2,7 @@ package com.icortex.localfood.controller;
 
 import com.icortex.localfood.dao.LoginDao;
 import com.icortex.localfood.model.User;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -26,9 +27,13 @@ public class LoginServlet extends HttpServlet {
 
         if(userValidate.equals("Success")){
             req.setAttribute("userName",username);
-            req.getRequestDispatcher("/welcome.jsp").forward(req,resp);
+            String jspPath = "/WEB-INF/views/welcome.jsp";
+            RequestDispatcher rd = req.getRequestDispatcher(jspPath);
+            rd.forward(req,resp);
         }else{
-            req.getRequestDispatcher("/login.jsp").forward(req,resp);
+            String jspPath = "/WEB-INF/views/login.jsp";
+            RequestDispatcher rd = req.getRequestDispatcher(jspPath);
+            rd.forward(req,resp);
         }
 
     }
