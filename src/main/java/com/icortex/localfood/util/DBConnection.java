@@ -12,7 +12,6 @@ public class DBConnection {
         String username = "root";
         String password = "Mcse97@mahin";
         try {
-
             con = DriverManager.getConnection(url,username,password);
 
         } catch (SQLException e) {
